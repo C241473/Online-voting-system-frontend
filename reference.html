@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteSphere - Online Voting</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+ *
+ body {
+    padding: top 10px; 
+    margin-top: 80px;
+}
+
+.main{
+    width: auto;
+    background:white;
+    background-position: center;
+    background-size: cover;
+    height:auto;
+}
+/* Content*/
+.container {
+    margin-top:8%;
+    width:auto;
+    margin: 0 auto;
+    padding: 40px;
+    background-color:#66666675; /* Gray background color */
+}
+
+     /* Categories Section */
+        .categories {
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 50px auto;
+            max-width: 1100px;
+        }
+
+        .category-card {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .category-card h3 {
+            font-size: 20px;
+            color: #374151;
+        }
+
+        .category-card p {
+            font-size: 16px;
+            color: #6b7280;
+        }
+
+        .category-card a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+             <div class="icon">
+                 <h1 class="logo">VoteSphere</h1>
+             </div>
+ 
+             <div class="menu">
+                 <ul>
+                     <li><a href="index.html">HOME</a></li>
+                     <li><a href="demo.html">DEMO</a></li>
+                     <li><a href="about.html">ABOUT</a></li>
+                     <li><a href="reference.html">REFERENCE</a></li>
+                     <li><a href="contact.html">CONTACT</a></li>
+                 </ul>
+             </div>
+             <div class="auth-buttons">
+                 <button class="btn login-btn" onclick="showLogin()">Login</button>
+                 <button class="btn signup-btn"><a href="sign up.html">Sign Up</a></button>
+             </div>
+         </div> 
+    <!-- Content -->
+    <div class="container">
+        <p><strong>You are here:Home</strong></p><hr>
+        <h1>Simple online voting</h1>
+
+        <ul>
+            <li>Boost voter turnout by using online voting</li>
+            <li>Simplify the poll management process with our services and support</li>
+            <li>Reduce your voting costs by up to 70% with VoteSphere</li>
+        </ul>
+</div>
+    <!-- Categories Section -->
+    <div class="categories">
+        <div class="category-card">
+            <img src="https://img.icons8.com/ios/50/000000/user-group-man-man.png" alt="Case Studies">
+            <h3>Case Studies</h3>
+            <p>Learn about our customers’ experiences with online voting.</p>
+        </div>
+        <div class="category-card">
+            <img src="https://img.icons8.com/ios/50/000000/flag.png" alt="Associations">
+            <h3>Associations</h3>
+            <p>Elect your association’s board online – unrestricted by location.</p>
+        </div>
+        <div class="category-card">
+            <img src="https://img.icons8.com/ios/50/000000/briefcase.png" alt="Companies">
+            <h3>Companies</h3>
+            <p>Elect your ombudsman and board of directors online.</p>
+        </div>
+        <div class="category-card">
+            <img src="https://img.icons8.com/ios/50/000000/conference.png" alt="Cooperatives">
+            <h3>Cooperatives</h3>
+            <p>Let your members elect their representatives online.</p>
+        </div>
+        <div class="category-card">
+            <img src="https://img.icons8.com/ios/50/000000/city.png" alt="Local Authorities">
+            <h3>Local authorities</h3>
+            <p>Vote in representatives for municipal councils online.</p>
+        </div>
+        <div class="category-card">
+            <img src="https://img.icons8.com/ios/50/000000/university.png" alt="Universities">
+            <h3>Universities</h3>
+            <p>Elect student committees and representative bodies online.</p>
+        </div>
+        <div class="category-card">
+            <img src="https://img.icons8.com/ios/50/000000/school.png" alt="Schools">
+            <h3>Schools</h3>
+            <p>Let pupils and their parents vote online for school councils and student parliaments.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">VoteSphere</div>
+                <p class="footer-text">
+                    Secure and transparent online voting made easy.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/strawpollcom/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://x.com/StrawPollcom"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.facebook.com/strawpollcom/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://discord.com/invite/x7pfswu"><ion-icon name="logo-discord"></ion-icon></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="index.html">How It Works</a>
+                <a href="index.html">Features</a>
+                <a href="index.html">FAQs</a>
+            </div>
+  
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="help.html">Help Center</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="term.html">Terms & Conditions</a>
+            </div>
+  
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="contact.html">Support</a>
+                <a href="contact.html">Email Us</a>
+                <a href="contact.html">Careers</a>
+            </div>
+            
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 VoteSphere. All rights reserved.
+        </div>
+    </footer>
+</div>
+
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>

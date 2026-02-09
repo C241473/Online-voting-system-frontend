@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <title>User Dashboard</title>
+    <style>
+       body {
+    display: flex;
+    margin: 0;
+    margin-top: 80px;
+    font-family: Arial, sans-serif;
+    }
+
+    .Dashboard {
+        display: flex;
+    width: 100%;
+    height: auto;
+    }
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #bbbbbb;
+    padding: 15px;
+    transition: width 0.3s;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+    overflow: hidden;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    width: 250px;
+    display: list-item;
+    list-style-type: none;
+    padding: 10%;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+.sidebar ul i{
+    width: 30x;
+    margin-right: 10%;
+    margin-left: -40px;
+}
+
+.sidebar ul li:hover{
+    color: #5ac29d;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ccc;
+    text-align: center;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 10px;
+    padding: 0%;
+    transition: transform 0.3s ease;
+}
+
+button {
+    margin-top: 2%;
+    margin-left: 0%;
+    padding: 10px 15px;
+    background-color: #5ac29d;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e6e55;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #556;
+    color: white;
+}
+
+.status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status.closed {
+    background-color: red;
+}
+
+.search{
+    width: 330px;
+    float: left;
+    margin-left: 250px;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #5ac29d;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #5ac29d;
+    border: 2px solid #5ac29d;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.profile-icon {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="navbar">
+                 <div class="icon">
+                     <h1 class="logo">VoteSphere</h1>
+                 </div>
+     
+                 <div class="menu">
+                     <ul>
+                         <li><a href="index.html">HOME</a></li>
+                         <li><a href="demo.html">DEMO</a></li>
+                         <li><a href="about.html">ABOUT</a></li>
+                         <li><a href="reference.html">REFERENCE</a></li>
+                         <li><a href="contact.html">CONTACT</a></li>
+                     </ul>
+                 </div>
+    
+                 <div class="search">
+                    <input class="srch" type="search" placeholder="Search">
+                    <button class="btn">Search</button>
+                </div>
+                <div class="profile-icon">
+                    <img src="13.jpeg" alt="Profile">
+                </div>
+            </div> 
+        </header>
+    <section class="Dashboard">
+    <div class="sidebar" id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+        <ul>
+            <li><i class="fas fa-home"></i><a href="user.html">Dashboard</a></li>
+            <li><i class="fas fa-paint-brush"></i><a href="theme.html">Themes</a></li>
+            <li><i class="fas fa-play-circle"></i><a href="demo.html">Live demo</a></li>
+            <li><i class="fas fa-user-shield"></i><a href="privacy.html">Privacy</a></li>
+            <li><i class="fas fa-cog"></i><a href="adminSetting.html">Settings</a></li>
+            <li><i class="fas fa-sign-out-alt"></i><a href="index.html">Sign Out</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>User Dashboard</h1>
+        <button onclick="createPoll()"><a href="poll1.html">Create Poll</a></button>
+        <table border="1" cellspacing="0" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Poll Name</th>
+                    <th>Date</th>
+                    <th>Participants</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Meeting Scheduling</td>
+                    <td>Mar 9, 2025</td>
+                    <td>10</td>
+                    <td><span class="status closed"></span> Closed</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">VoteSphere</div>
+                <p class="footer-text">
+                    Secure and transparent online voting made easy.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/strawpollcom/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://x.com/StrawPollcom"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.facebook.com/strawpollcom/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://discord.com/invite/x7pfswu"><ion-icon name="logo-discord"></ion-icon></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="index.html">How It Works</a>
+                <a href="index.html">Features</a>
+                <a href="index.html">FAQs</a>
+            </div>
+  
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="help.html">Help Center</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="term.html">Terms & Conditions</a>
+            </div>
+  
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="contact.html">Support</a>
+                <a href="contact.html">Email Us</a>
+                <a href="contact.html">Careers</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 VoteSphere. All rights reserved.
+        </div>
+    </footer>
+    </div>
+
+    <script>
+          function toggleSidebar() {
+    let sidebar = document.getElementById("sidebar");
+    let mainContent = document.querySelector(".main-content");
+
+    sidebar.classList.toggle("collapsed");
+
+    if (sidebar.classList.contains("collapsed")) {
+        mainContent.style.marginLeft = "60px";  // Adjust for collapsed width
+    } else {
+        mainContent.style.marginLeft = "250px"; // Default width
+    }
+
+    let links = sidebar.querySelectorAll("ul li a");
+    links.forEach(link => {
+        if (sidebar.classList.contains("collapsed")) {
+            link.style.display = "none";
+        } else {
+            link.style.display = "inline";
+        }
+    });
+}
+
+    </script>
+</body>
+</html>

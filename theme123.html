@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <style>
+        body{
+            margin-top: 80px;
+        }
+        
+        
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            flex-grow: 1;
+            padding-bottom: 50px;
+        }
+
+        .theme-card {
+            border: 2px solid #444;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .theme-card h2 {
+            font-size: 18px;
+        }
+
+        .options {
+            margin: 10px 0;
+        }
+
+        .vote-btn,
+        .results-btn {
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 5px auto;
+            width: 80%;
+        }
+
+        .moss { background-color: #8B8F5A; color: #FFFFFF; }
+        .lavender { background-color: #E8DAEF; color: #4B1F69; }
+        .charcoal { background-color: #4C4C4C; color: #D3D3D3; }
+        .indigo-light { background-color: #DAE8FC; color: #0E1C55; }
+        .indigo-dark { background-color: #4B0082; color: white; }
+        .cyberpunk { background-color: #000; color: #00FF00; }
+
+        .theme-card:hover {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .containertheme {
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+            color: rgb(3, 3, 3);
+        }
+
+        .create-theme {
+            border: 2px dashed #FFB400;
+            padding: 50px;
+            border-radius: 10px;
+            background-color: #e5e8ef;
+            display: inline-block;
+        }
+
+        .plus {
+
+            font-size: 50px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            margin-top: 10px;
+            padding: 0%;
+            transition: transform 0.3s ease;
+        }
+
+        button {
+            margin-top: 2%;
+            margin-left: 0%;
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1e6e55;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #556;
+            color: white;
+        }
+
+        .status {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .status.closed {
+            background-color: red;
+        }
+
+        .search {
+            width: 330px;
+            float: left;
+            margin-left: 250px;
+        }
+
+        .srch {
+            font-family: 'Times New Roman';
+            width: 200px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid #5ac29d;
+            margin-top: 13px;
+            color: #fff;
+            border-right: none;
+            font-size: 16px;
+            float: left;
+            padding: 10px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+        .btn {
+            width: 100px;
+            height: 40px;
+            background: #5ac29d;
+            border: 2px solid #5ac29d;
+            margin-top: 13px;
+            color: #fff;
+            font-size: 15px;
+            border-bottom-right-radius: 5px;
+            transition: 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color: #000;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .srch:focus {
+            outline: none;
+        }
+
+        .profile-icon {
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .profile-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sidebar ul li button {
+            display: inline-block;
+            width: 100%;
+            background: transparent;
+            border: none;
+            text-align: left;
+            color: inherit;
+        }
+        .header1{
+            position:center;
+        }
+        .footer {
+            
+    background: #222;
+    color: #ddd;
+    padding: 40px 20px;
+    text-align: center;
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+.footer-text {
+    max-width: 300px;
+    font-size: 14px;
+    color: #bbb;
+}
+.footer-section {
+    flex: 1;
+    min-width: 150px;
+    margin: 15px;
+    text-align: left;
+}
+.footer-section h4 {
+    font-size: 16px;
+    color: #f8f8f8;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.footer-section a {
+    display: block;
+    color: #4CAF50;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.footer-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    display: inline-block;
+    background: #333;
+    color: #ddd;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    background: #4CAF50;
+    color: #fff;
+}
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="navbar">
+        <div class="icon">
+            <h1 class="logo">VoteSphere</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="demo.html">DEMO</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="reference.html">REFERENCE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input class="srch" type="search" placeholder="Search">
+            <button class="btn">Search</button>
+        </div>
+        <div class="profile-icon">
+            <img src="13.jpeg" alt="Profile">
+        </div>
+    </div> 
+</header>
+<hr><a href="user.html">Back to User </a>
+<br><br>
+
+<header1><h1>Themes</h1></header1>
+<div class="container1">
+   
+        <div class="theme-card moss">
+            <h2>Moss</h2>
+            <div>
+                <input type="radio" name="option3" id="option3-1" disabled>
+                <label for="option3-1">Option 1</label><br>
+                <input type="radio" name="option3" id="option3-2"disabled>
+                <label for="option3-2">Option 2</label>
+            </div>
+            <button class="vote-btn disabled" onclick="vote('Moss')">Vote</button>
+            <button class="results-btn disabled" onclick="showResults('Moss')">Results</button>
+        </div>
+        <div class="theme-card lavender">
+            <h2>Lavender</h2>
+            <div class="options">
+                <input type="radio" name="option4" id="option4-1"disabled>
+                <label for="option4-1">Option 1</label><br>
+                <input type="radio" name="option4" id="option4-2"disabled>
+                <label for="option4-2">Option 2</label>
+            </div>
+            <button class="vote-btn disabled" onclick="vote('Lavender')">Vote</button>
+            <button class="results-btn disabled" onclick="showResults('Lavender')">Results</button>
+        </div>
+        <div class="theme-card charcoal">
+            <h2>Charcoal</h2>
+            <div class="options">
+                <input type="radio" name="option5" id="option5-1" disabled>
+                <label for="option5-1">Option 1</label><br>
+                <input type="radio" name="option5" id="option5-2" disabled>
+                <label for="option5-2">Option 2</label>
+            </div>
+            <button class="vote-btn disabled" onclick="vote('Charcoal')">Vote</button>
+            <button class="results-btn disabled" onclick="showResults('Charcoal')">Results</button>
+        </div>
+        <div class="theme-card indigo-light">
+            <h2>Indigo Light</h2>
+            <div class="options">
+                <input type="radio" name="option6" id="option6-1"disabled>
+                <label for="option6-1">Option 1</label><br>
+                <input type="radio" name="option6" id="option6-2" disabled>
+                <label for="option6-2">Option 2</label>
+            </div>
+            <button class="vote-btn disabled" onclick="vote('Indigo Light')">Vote</button>
+            <button class="results-btn disabled" onclick="showResults('Indigo Light')">Results</button>
+        </div>
+        <div class="theme-card indigo-dark">
+            <h2>Indigo Dark</h2>
+            <div class="options">
+                <input type="radio" name="option7" id="option7-1"disabled>
+                <label for="option7-1">Option 1</label><br>
+                <input type="radio" name="option7" id="option7-2" disabled>
+                <label for="option7-2">Option 2</label>
+            </div>
+            <button class="vote-btn disabled" onclick="vote('Indigo Dark')">Vote</button>
+            <button class="results-btn disabled" onclick="showResults('Indigo Dark')">Results</button>
+        </div>
+        <div class="theme-card cyberpunk">
+            <h2>Cyberpunk</h2>
+            <div class="options">
+                <input type="radio" name="option8" id="option8-1"disabled>
+                <label for="option8-1">Option 1</label><br>
+                <input type="radio" name="option8" id="option8-2" disabled>
+                <label for="option8-2">Option 2</label>
+            </div>
+            <button class="vote-btn disabled" onclick="vote('Cyberpunk')">Vote</button>
+            <button class="results-btn disabled" onclick="showResults('Cyberpunk')">Results</button>
+        </div>
+        <div class="containertheme">
+            <div class="create-theme">
+                <span class="plus">+</a></span>
+                <a href="theme.html"><h3>Create a new theme</h3>
+            </div>      
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">VoteSphere</div>
+                <p class="footer-text">Secure and transparent online voting made easy.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/strawpollcom/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://x.com/StrawPollcom"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.facebook.com/strawpollcom/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://discord.com/invite/x7pfswu"><ion-icon name="logo-discord"></ion-icon></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#features">Features</a>
+                <a href="faq.html">FAQs</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="help.html">Help Center</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="term.html">Terms & Conditions</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="contact.html">Support</a>
+                <a href="contact.html">Email Us</a>
+                <a href="contact.html">Careers</a>
+            </div>
+           
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 VoteSphere. All rights reserved.
+        </div>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Poll</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style> 
+      body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            background:url(12.jpg);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        } 
+
+        .container {
+            margin: top 80px;;
+           background: rgba(104, 163, 198, 0.466);
+            padding: 30px;
+            border-radius: 20px;
+            width: 500px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 15px;
+            color: white;
+        }
+
+        p,
+        label {
+            color: white;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        input,
+        button,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
+        }
+         button a {
+            text-decoration: none;
+            
+         }
+        input {
+            background: #2c3e50;
+            color: white;
+            border: 1px solid #555;
+        }
+
+        button {
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .create {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .create:hover {
+            background-color: #219150;
+        }
+
+        .draft {
+            background-color: #7f8c8d;
+            color: white;
+        }
+
+        .draft:hover {
+            background-color: #6c7a7a;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            max-height: 200px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+
+        .option-input {
+            background-color: #2c3e50;
+            border: 1px solid #666;
+            border-radius: 4px;
+            padding:10px;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .add-option {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .add-option:hover {
+            background-color: #0056b3;
+        }
+
+        .custom-dropdown {
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .dropdown-btn {
+            background: #2c3e50;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #555;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background: #2c3e50;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 5px;
+            padding: 5px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            list-style: none;
+            z-index: 10;
+        }
+
+        .dropdown-menu li {
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .dropdown-menu li:hover {
+            background: #219150;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .description-image-section {
+            margin-top: 10px;
+            color: white;
+        }
+
+        .security {
+            margin-top: 20px;
+            text-align: left;
+            color: white;
+        }
+
+        .security select {
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Create a Poll</h1>
+        <p>Complete the below fields to create your poll.</p>
+        <form id="pollForm">
+            <div class="form-group">
+               <label for="title">Title</label><br><br>
+                <input type="text" id="title" placeholder="Type your question here" required>
+                <button type="button" id="toggleDescription">+ Add description or image</button>
+                <div id="descriptionImageSection" class="description-image-section hidden">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Add description here"></textarea>
+                    <label for="image">Image URL</label>
+                    <input type="text" id="image" placeholder="Paste image URL here">
+                </div>
+            </div>
+
+            <div class="custom-dropdown">
+                <button type="button" class="dropdown-btn">
+                    <span id="selected-option"><i class="fa-solid fa-check-circle"></i> Multiple Choice</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li data-value="multiple-choice"><i class="fa-solid fa-check-circle"></i> Multiple Choice</li>
+                    <li data-value="meeting"><i class="fa-solid fa-calendar"></i> Meeting Poll</li>
+                    <li data-value="image"><i class="fa-solid fa-image"></i> Image Poll</li>
+                    <li data-value="ranking"><i class="fa-solid fa-chart-bar"></i> Ranking Poll</li>
+                </ul>
+                <input type="hidden" id="poll-type" value="multiple-choice">
+            </div>
+<br><br>
+            <label>Answer Options</label>
+            <div class="poll-container">
+                <h2>Multiple Choice</h2>
+                <div class="options-container" id="optionsContainer">
+                    <input type="text" placeholder="Option 1" class="option-input" />
+                    <input type="text" placeholder="Option 2" class="option-input" />
+                </div>
+                <button type="button" class="add-option" id="addOptionButton">+ Add option</button>
+            </div>
+            
+            <div class="security">
+                <label>Voting Security</label>
+                <select>
+                    <option>Multiple votes per person</option>
+                    <option>One vote per browser session</option>
+                    <option selected>One vote per IP address</option>
+                    <option>One vote per email address (coming soon)</option>
+                    <option>One vote per unique code</option>
+                </select>
+                <label><br>Block VPN users <input type="checkbox" checked/></label>
+            </div>
+          
+            <div class="buttons">
+                <button type="submit" class="create">Create Poll</button>
+                <button type="button" class="draft" id="saveDraftButton">Save as Draft</button>
+                
+                    <button><a href="user.html">Back</a></button>
+                  
+                </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownBtn = document.querySelector(".dropdown-btn");
+            const dropdownMenu = document.querySelector(".dropdown-menu");
+            const selectedOption = document.getElementById("selected-option");
+            const pollTypeInput = document.getElementById("poll-type");
+
+            dropdownBtn.addEventListener("click", function () {
+                dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+            });
+
+            dropdownMenu.querySelectorAll("li").forEach(item => {
+                item.addEventListener("click", function () {
+                    selectedOption.innerHTML = item.innerHTML;
+                    pollTypeInput.value = item.getAttribute("data-value");
+                    dropdownMenu.style.display = "none";
+                });
+            });
+
+            document.addEventListener("click", function (e) {
+                if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownMenu.style.display = "none";
+                }
+            });
+
+            const addButton = document.getElementById('addOptionButton');
+            const optionsContainer = document.getElementById('optionsContainer');
+
+            addButton.addEventListener('click', () => {
+                const newInput = document.createElement('input');
+                newInput.type = 'text';
+                newInput.placeholder = `Option ${optionsContainer.children.length + 1}`;
+                newInput.className = 'option-input';
+                optionsContainer.appendChild(newInput);
+            });
+            
+            // Toggle the visibility of the description and image section
+            document.getElementById('toggleDescription').addEventListener('click', function () {
+                const section = document.getElementById('descriptionImageSection');
+                section.classList.toggle('hidden');
+            });
+
+            // Handle poll creation
+            document.getElementById('pollForm').addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent page reload
+                alert('Poll Created!'); // Show alert on creation
+                // Here you can handle further logic to send the poll data to a server if needed.
+            });
+
+            // Handle saving as draft
+            document.getElementById('saveDraftButton').addEventListener('click', function () {
+                alert('Poll Saved as Draft!'); // Show alert when saving as draft
+                // Here you can add logic to save the draft data to a server if needed.
+            });
+        });
+    </script>
+</body>
+
+</html>

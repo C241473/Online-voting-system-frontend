@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Page</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="main">
+    <header>
+        <div class="navbar">
+             <div class="icon">
+              <br>
+              <br>
+            <br> 
+            <br><h1 class="logo">VoteSphere</h1>
+             </div>
+ 
+             <div class="menu">
+                 <ul>
+                     <li><a href="index.html">HOME</a></li>
+                     <li><a href="demo.html">DEMO</a></li>
+                     <li><a href="about.html">ABOUT</a></li>
+                     <li><a href="reference.html">REFERENCE</a></li>
+                     <li><a href="contact.html">CONTACT</a></li>
+                 </ul>
+             </div>
+
+             <div class="auth-buttons">
+                <button class="btn login-btn" onclick="showLogin()">Login</button>
+                <button class="btn signup-btn"><a href="sign up.html">Sign Up</a></button>
+            </div>
+        </div> 
+    </header>
+
+    <div class="Poll">
+      <h1>Real-Time Polling</h1>
+      <p>See how easy it is to conduct a poll with live results.</p>
+      <div class="poll-container">
+        <h2>How easy is it to embed a Poll?</h2>
+        <div class="question">Make a choice:</div>
+        <div class="options">
+            <label for="option1"><input type="radio" id="option1" name="poll" value="Super easy"> Super easy</label>
+            <label for="option2"><input type="radio" id="option2" name="poll" value="Somewhat easy"> Somewhat easy</label>
+            <label for="option3"><input type="radio" id="option3" name="poll" value="Moderate"> Moderate</label>
+            <label for="option4"><input type="radio" id="option4" name="poll" value="Quite difficult"> Quite difficult</label>
+            <label for="option5"><input type="radio" id="option5" name="poll" value="Very difficult"> Very difficult</label>
+
+        </div>
+        <div class="buttons">
+            <button class="vote-btn" onclick="submitVote()">Vote <i class="fas fa-arrow-right"></i></button>
+            <button class="results-btn" onclick="showResults()"><i class="fas fa-chart-bar"></i> Show results</button>
+        </div>
+        <div id="results"></div>
+      </div>
+    </div>
+    
+    <div class="container2">
+        <h1>Anonymous Polls</h1>
+        
+        <section class="use-case">
+            <h2>Use case</h2>
+            <p>An anonymous poll is perfect for finding out the majority opinion of a large group. This is the most common type of poll on our platform. It should be used when you post a poll on social media, message boards, or other websites.</p>
+        </section>
+
+        <section class="default-settings">
+            <h2>Default settings</h2>
+            <ul>
+                <li>✔️ Strict check for double voting (via <strong>IP Address</strong> & additional security measures)</li>
+                <li>✔️ Participants' names are <strong>not</strong> requested.</li>
+                <li>✔️ VPN users are <strong>not</strong> allowed to vote.</li>
+                <li>✔️ <strong>Nobody</strong> is allowed to edit their vote.</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="container2">
+        <h1>Group Polls</h1>
+        
+        <section class="use-case">
+            <h2>Use case</h2>
+            <p>A group poll is the right choice when an individual's opinion and name is important. Participants must enter their name when voting. Group polls are best when you want to make a decision about something in a small group of friends, at school, or at the office.  
+        </section>
+        
+        <section class="default-settings">
+            <h2>Default settings</h2>
+            <ul>
+                <li>✔️ Low check for double voting (via <strong>browser session)</strong></li>
+                <li>✔️ Participants' names are <strong>required.</strong></li>
+                <li>✔️ VPN users are allowed to vote.</li>
+                <li>✔️ While poll<strong> Admins</strong>can change all votes, each <strong>Voter</strong> can edit their own vote.</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="container2">
+        <h1>Meeting Polls</h1>
+        
+        <section class="use-case">
+            <h2>Use case</h2>
+            <p>A meeting poll is similar to a group poll, except that the options consist of date & time. Meeting polls are very versatile and should be used whenever you want your participants to vote on availabilities. From group events to joint scheduling with friends, colleagues or business partners, meeting polls can be useful everywhere     
+        </section>
+
+        <section class="default-settings">
+            <h2>Default settings</h2>
+            <ul>
+                <li>✔️ Poll options are <strong>dates & times.</strong></li>
+                <li>✔️ Participants' names are required.</li>
+                <li>✔️ VPN users are allowed to vote.</li>
+                <li>✔️ While poll<strong>Admins</strong> can change all votes, each <strong>Voter</strong> can edit their own vote.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">VoteSphere</div>
+                <p class="footer-text">
+                    Secure and transparent online voting made easy.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/strawpollcom/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://x.com/StrawPollcom"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.facebook.com/strawpollcom/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://discord.com/invite/x7pfswu"><ion-icon name="logo-discord"></ion-icon></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="index.html">How It Works</a>
+                <a href="index.html">Features</a>
+                <a href="index.html">FAQs</a>
+            </div>
+  
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="help.html">Help Center</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="term.html">Terms & Conditions</a>
+            </div>
+  
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="contact.html">Support</a>
+                <a href="contact.html">Email Us</a>
+                <a href="contact.html">Careers</a>
+            </div>
+            
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 VoteSphere. All rights reserved.
+        </div>
+    </footer>
+    </div>
+
+<style>
+    body{
+        
+            padding: top 0; 
+            margin: 10px;
+    }
+    .main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%,rgba(0, 0, 0, 0.5)50%),url(12.jpg);
+    background-position: center;
+    background-size: cover;
+    height:0;
+}
+    .Poll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 60px;
+}
+    .poll h1 {
+        margin-top: 10%;
+        text-align: center;
+        color: #000;
+    }
+    .poll p{
+        color: #000;
+        text-align: center;
+    }
+
+.poll-container {
+    background: rgb(250, 250, 250);
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    border-color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 30px;
+}
+h2 {
+    text-align: center;
+}
+.question {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.options label {
+    color: #000;
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.vote-btn {
+    background-color: #2566ff;
+    color: #000000;
+}
+.results-btn {
+    background-color: #2566ff;
+}
+#results {
+    color: #000;
+    display: none;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.container2 {
+    max-width: 600px;
+    height: 400px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+h1 {
+    margin-top: -50px;
+    font-size: 24px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+p {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Sections */
+.use-case, .default-settings, .poll-preview {
+    margin-bottom: 20px;
+}
+
+/* List */
+.default-settings ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.default-settings li {
+    margin: 10px 0;
+}
+
+</style>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

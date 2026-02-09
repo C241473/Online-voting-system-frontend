@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding: top 0; 
+            margin: 10px;
+        }
+        
+        .jump {
+            max-width: fit-content;
+            height: fit-content;
+            margin: auto;
+            background-image: url('12.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+            padding: 150px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+            animation: jump 1.5s;
+        } 
+        .jump h1 {
+            margin-top: -50px;
+            text-align: left;
+            color: #003366;
+        }
+        .jump h2 {
+            font-size: 20px;
+            text-align: left; 
+            margin-top: 5%;
+            color: #003366;
+            transition: transform 0.5s ease;
+        }
+        .jump ul {
+            text-align: left; 
+            margin-bottom: 5%;
+            padding: 0; /* Remove default padding */
+            list-style-position: inside; /* Ensures bullets align properly */
+            padding-left: 20px; /* Adds proper left padding */
+            display: block; /* Prevents inline behavior */
+            width: 100%; /* Ensures it takes full width */
+        }
+
+        .jump ul li {
+            font-size: 15px;
+            margin-top: 5px;
+            list-style-type: disc; /* Use bullet points */
+            display: list-item; /* Ensures items stay as block elements */
+        }
+        .jump p {
+            margin-top: 2%;
+            text-align: left;
+            color: #003366;
+        }
+        a {
+            color: #005b96;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes jump {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+
+        /* Sliding Animation */
+        .slide {
+            transform: translateX(-100%);
+            animation: slideIn 0.5s forwards;
+        }
+
+        @keyframes slideIn {
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <header>
+       <div class="navbar">
+             <div class="icon">
+                 <h1 class="logo">VoteSphere</h1>
+             </div>
+ 
+             <div class="menu">
+                 <ul>
+                     <li><a href="index.html">HOME</a></li>
+                     <li><a href="Demo.html">DEMO</a></li>
+                     <li><a href="About.html">ABOUT</a></li>
+                     <li><a href="reference.html">REFERENCE</a></li>
+                     <li><a href="Contact.html">CONTACT</a></li>
+                 </ul>
+             </div>
+             <div class="auth-buttons">
+                <button class="btn login-btn" onclick="showLogin()">Login</button>
+                <button class="btn signup-btn"><a href="sign up.html">Sign Up</a></button>
+            </div>
+            
+        </div> 
+    </header>
+
+    <div class="jump">
+    <h1>About Us</h1>
+    <p class="slide">We are a leading company in online voting solutions, providing secure and high-quality services to clients worldwide.</p>
+
+    <h2 class="slide">1. Company Mission</h2>
+    <ul>
+        <li>State your purpose: Describe the core mission of your company in the context of online voting.</li>
+        <li>Commitment to integrity: Explain your commitment to secure and fair voting processes.</li>
+    </ul>
+
+    <h2 class="slide">2. Values and Vision</h2>
+    <ul>
+        <li>Core Values: Highlight values such as transparency, security, and accessibility.</li>
+        <li>Vision: What do you envision for the future of voting technology?</li>
+    </ul>
+
+    <br><h2 class="slide">3. Services Offered</h2>
+    <ul>
+        <li>Voting Solutions: Explain the types of online voting systems you provide (e.g., elections, surveys, polls).</li>
+        <li>Additional Services: Highlight any related services, such as consultancy, training, or support.</li>
+    </ul>
+
+    <h2 class="slide">4. Technology and Security</h2>
+    <ul>
+        <li>Innovative Solutions: Discuss the technology behind your voting system (e.g., encryption, user authentication).</li>
+        <li>Security Measures: Outline measures taken to ensure voter privacy and data security.</li>
+    </ul>
+
+    <h2 class="slide">5. Target Audience</h2>
+    <ul>
+        <li>Who You Serve: Specify who can benefit from your services (e.g., government agencies, corporations, organizations).</li>
+    </ul>
+
+    <h2 class="slide">6. Team Background</h2>
+    <ul>
+        <li>Expertise: Introduce the team's expertise in technology, electoral processes, and cybersecurity.</li>
+        <li>Experience: Briefly mention any relevant experience or achievements.</li>
+    </ul>
+
+    <h2 class="slide">7. Testimonials/ Case Studies</h2>
+    <ul>
+        <li>Client Feedback: Include quotes or brief testimonials from satisfied clients.</li>
+        <li>Success Stories: Mention any successful implementations or projects.</li>
+    </ul>
+
+    <h2 class="slide">8. Contact Information</h2>
+    <ul>
+        <li>Get in Touch: Provide easy access to contact details or a contact form for further inquiries.</li>
+    </ul>
+
+    <h2 class="slide">9. Call to Action</h2>
+    <ul>
+        <li>Engagement: Encourage visitors to learn more about your services or get started with a demo.</li>
+    </ul>
+
+    <h2 class="slide">10. Social Responsibility</h2>
+    <ul>
+        <li>Community Engagement: Briefly discuss any initiatives your company is involved in related to civic engagement or improving the voting process.</li>
+    </ul>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">VoteSphere</div>
+                <p class="footer-text">
+                    Secure and transparent online voting made easy.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/strawpollcom/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://x.com/StrawPollcom"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.facebook.com/strawpollcom/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://discord.com/invite/x7pfswu"><ion-icon name="logo-discord"></ion-icon></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="index.html">How It Works</a>
+                <a href="index.html">Features</a>
+                <a href="index.html">FAQs</a>
+            </div>
+  
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="help.html">Help Center</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="term.html">Terms & Conditions</a>
+            </div>
+  
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="contact.html">Support</a>
+                <a href="contact.html">Email Us</a>
+                <a href="contact.html">Careers</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 VoteSphere. All rights reserved.
+        </div>
+    </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>

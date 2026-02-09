@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Online voting-Registration</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+     * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Light background color */
+    color: #000000; /* Dark text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.signup {
+    background: rgb(199, 229, 226); /* White background for the form */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 300px; /* Fixed width for the form */
+}
+
+.signup h2 {
+    margin-bottom: 10px; /* Space below the heading */
+    text-align: center; /* Center the heading */
+}
+
+.signup input,
+.signup select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input */
+    margin: 5px 0; /* Space above and below */
+    border: 1px solid #000000; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ffffff; /* Set a white background for better contrast */
+    color: #000000; /* Dark text color */
+}
+
+/* Style for placeholder text */
+.signup input::placeholder {
+    color: #888888; /* Light gray color for placeholder text */
+    opacity: 1; /* Ensure the placeholder is fully opaque */
+}
+
+.signup .user-type {
+    margin: 10px 0; /* Space above and below the user type dropdown */
+}
+
+.signup .terms {
+    margin: 10px 0; /* Space above and below the terms checkbox */
+}
+
+.btn-signup {
+    background-color: #240fde; /* Blue background for the button */
+    color: rgb(255, 255, 255); /* White text color */
+    border: none; /* No border */
+    padding: 10px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 50%; /* Full width */
+    font-size: 16px; /* Font size */
+}
+
+.btn-signup:hover {
+    background-color: #167c7ea9; /* Darker blue on hover */
+}
+
+.link {
+    text-align: center; /* Center the link */
+    margin-top: 10px; /* Space above the link */
+}
+
+.link a {
+    color: #240fde; /* Blue color for the link */
+    text-decoration: none; /* No underline */
+}
+
+.link a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+    </style>
+    </head>
+    
+    <body>
+                <div class="signup">
+                    <h2>Sign Up</h2>
+                    <form>
+                        <input type="text" name="fullname" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email" required><br><br>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="confirm_password" placeholder="Confirm Password" required><br><br>
+                        <input type="tel" name="phone" placeholder="Phone Number (optional)">
+                        
+                        <div class="user-type">
+                            <label for="user-type">User  Type:</label>
+                            <select name="user-type" id="user-type">
+                                
+                                <option value="admin">Admin</option>
+                                <option value="voter">Poll Creator</option>
+                                <option value="voter">Voter</option>
+                            </select>
+                        </div>
+    
+                        <div class="terms">
+                            <input type="checkbox" name="terms" required>
+                            <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
+                        </div>
+    
+                        <button type="submit" class="btn-signup">Sign Up</button>
+                    </form>
+    
+                    <p class="link">Already have an account? <a href="index.html">Log in</a></p>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

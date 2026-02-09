@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="main">
+        <header>
+        <div class="navbar">
+             <div class="icon">
+                 <h1 class="logo">VoteSphere</h1>
+             </div>
+ 
+             <div class="menu">
+                 <ul>
+                     <li><a href="index.html">HOME</a></li>
+                     <li><a href="demo.html">DEMO</a></li>
+                     <li><a href="about.html">ABOUT</a></li>
+                     <li><a href="reference.html">REFERENCE</a></li>
+                     <li><a href="contact.html">CONTACT</a></li>
+                 </ul>
+             </div>
+
+             <div class="auth-buttons">
+                <button class="btn login-btn" onclick="showLogin()">Login</button>
+                <button class="btn signup-btn"><a href="sign up.html">Sign Up</a></button>
+            </div>
+        </div> 
+    </header>
+        <div class="content">
+            <h1 class="anim">Create <br><span>A Poll</span> <br>In Seconds</h1>
+            <p class="par anim">"Make decisions effortlessly <br> create a poll, gather votes,
+               <br>and get results in no time!"</p>
+
+            <button class="cn anim" onclick="showLogin()">Create your own poll</button>
+
+            <!-- Login Form Popup -->
+            <div class="overlay" id="overlay" onclick="hideLogin()"></div>
+
+            <div class="form" id="loginForm">
+                <h2>Login Here</h2>
+                <form action="login.html" method="POST">
+                    <input type="email" name="email" placeholder="Enter Email Here" required>
+                    <input type="password" name="password" placeholder="Enter Password Here" required>
+                    <button class="btnn" type="submit">Login</button>
+                    <button class="btnn" type="button" onclick="hideLogin()">Cancel</button>
+
+                <p class="link"> Don't have an account?  
+                   <br><a href="sign up.html">Sign up</a> here</p>
+                <p class="liw">Log in with</p>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/strawpollcom/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://x.com/StrawPollcom"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.facebook.com/strawpollcom/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://discord.com/invite/x7pfswu"><ion-icon name="logo-discord"></ion-icon></a>
+                </div>
+            </form>
+            </div>
+        </div>
+
+        <section class="how-it-works" id="how-it-works">
+            <h2>How Does It Work?</h2>
+            <p>Our voting system ensures a secure, easy, and transparent process. But all internet voting projects follow the same basic flow.</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-title">Poll Set-Up</div>
+                    <p class="step-text">Create a poll, set dates, define questions and choose authentication methods.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-title">Voting</div>
+                    <p class="step-text">Voters log in securely, cast their votes anonymously, and receive a confirmation.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-title">Results</div>
+                    <p class="step-text">Votes are automatically counted, and results are published transparently.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secure">
+            <h1>Secure Online Voting System</h1>
+            <p>Online voting system for secure and efficient decision-making</p>
+        </section>
+        
+        <section class="features" id="features">
+            <div class="feature"><br>
+                <img src="3.jpg" alt="Easy Setup">
+                <h2>Easy Setup</h2>
+                <p>Get started in minutes, not hours!</p>
+            </div>
+            <div class="feature"><br>
+                <img src="4.jpg" alt="Data Security">
+                <h2>Data Security</h2>
+                <p>"Trust in democracy starts with trust in technology—secure encryption and transparency are the pillars of online voting."
+                </p>
+            </div>
+            <div class="feature"><br>
+                <img src="5.jpg" alt="Instant Results">
+                <h2>Instant Results</h2>
+                <p>See results as they come in, no waiting!</p>
+            </div>
+            <div class="feature"><br>
+                <img src="6.jpg" alt="Mobile Friendly">
+                <h2>Mobile Friendly</h2>
+                <p>"Democracy in your pocket—vote anytime, anywhere with a mobile-friendly online voting system."</p>
+            </div>
+        </section>
+
+        <div class="container1">       
+        <div class="faq" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item"><a href="faq.html">📌 How secure is the system?</a></div>
+            <div class="faq-item"><a href="faq.html">📌 Can I vote from my phone?</a></div>
+            <div class="faq-item"><a href="faq.html">📌 What if I forget my password?</a></div>
+            <div class="faq-item"><a href="faq.html">📌 Is there a limit on votes?</a></div>
+            <div class="faq-item"><a href="faq.html">📌 What support do you offer?</a></div>
+        </div>
+        <div>
+            <div class="feature">
+                <p>Simplicity First</p>
+                <h2 class="highlight">Top Security</h2>
+            </div>
+            <div class="feature">
+                <p>Get real-time updates on voting results, so you can see how things are shaping up without the nail-biting wait.</p>
+                <h2 class="highlight">Instant Updates</h2>
+            </div>
+            <div class="feature">
+                <p>Access your voting platform from any device, whether it's a smartphone, tablet, or desktop. Vote wherever you are!</p>
+                <h2 class="highlight">Any Device</h2>
+            </div>
+        </div>
+        </div> 
+
+        <div class="container">
+            <!-- Image Section -->
+            <div class="image-container">
+                <img src="7.jpg">
+            </div>
+    
+            <!-- Text Section -->
+            <div class="text-container">
+                <h3>Voting Made Easy</h3>
+                <h2>Voting</h2>
+                <p>Say goodbye to long lines and paper ballots. Our system is fast, secure, and user-friendly.</p>
+            </div>       
+        </div>   
+
+    <div class="container">
+        <h2>Meet The Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <span class="number">01</span>
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="John Smith">
+                <h3>Nazeha Mosharaf</h3>
+                <a href="#">Nazehamosharaf@gmail.com</a>
+            </div>
+            <div class="team-member">
+                <span class="number">02</span>
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emily Davis">
+                <h3>Joynab Sumaya Karim</h3>
+                <a href="#">Joynabsumayakarim@gmail.com</a>
+            </div>
+            <div class="team-member">
+                <span class="number">03</span>
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Michael Brown">
+                <h3>Sanjida Sultana Sumi</h3>
+                <a href="#">Sanjidashumi@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">VoteSphere</div>
+                <p class="footer-text">
+                    Secure and transparent online voting made easy.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/strawpollcom/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://x.com/StrawPollcom"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.facebook.com/strawpollcom/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://discord.com/invite/x7pfswu"><ion-icon name="logo-discord"></ion-icon></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#features">Features</a>
+                <a href="faq.html">FAQs</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="help.html">Help Center</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="term.html">Terms & Conditions</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="contact.html">Support</a>
+                <a href="contact.html">Email Us</a>
+                <a href="contact.html">Careers</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; 2025 VoteSphere. All rights reserved.
+        </div>
+    </footer>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
+</body>
+</html>

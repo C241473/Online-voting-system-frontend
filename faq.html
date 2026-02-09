@@ -1,0 +1,135 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.box {
+    max-width: 600px;
+    height: fit-content;
+    margin: auto;
+    background-color: #fff;
+    padding: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+h4{
+    color: #505fc4;
+}
+    h1 {
+    margin-top: 0px;
+    font-size: 35px;
+    text-align: left;
+}
+
+h3 {
+    color:#367f9a;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+</style>
+<body>
+    <div class="main">
+        <header>
+        <div class="navbar">
+             <div class="icon">
+                 <h1 class="logo">VoteSphere</h1>
+             </div>
+ 
+             <div class="menu">
+                 <ul>
+                     <li><a href="index.html">HOME</a></li>
+                     <li><a href="demo.html">DEMO</a></li>
+                     <li><a href="about.html">ABOUT</a></li>
+                     <li><a href="reference.html">REFERENCE</a></li>
+                     <li><a href="contact.html">CONTACT</a></li>
+                 </ul>
+             </div>
+
+             <div class="auth-buttons">
+                <button class="btn login-btn" onclick="showLogin()">Login</button>
+                <button class="btn signup-btn"><a href="signup.html">Sign Up</a></button>
+            </div>
+        </div> 
+    </header>
+
+
+        <div class="box">
+            <h4>F.A.Q</h4><br>
+            <h1>Frequently Asked Questions</h1><br>
+            <h3>How secure is the system?</h3><br>
+            <p>Security is a top priority in our online voting system. The platform implements end-to-end encryption to protect all data transmissions, ensuring that votes and user credentials remain confidential and secure. Each user must authenticate using a secure login system, and access is strictly role-based, meaning voters, poll creators, and administrators each have specific permissions. Additionally, the system logs all activities for auditing purposes and uses tamper-proof methods for vote storage to prevent manipulation or unauthorized access. We also apply regular security updates and vulnerability scans to keep the system resilient against cyber threats.</p>
+            <h3>Can I vote from my phone?</h3><br>
+            <p>Yes, the system is fully optimized for mobile devices. Whether you're using a smartphone or tablet, the interface adjusts to your screen size for a smooth and user-friendly experience. You can securely log in, view available polls, and cast your vote from anywhere with an internet connection. This mobile compatibility ensures that participation is easy and accessible, no matter where you are, encouraging greater voter turnout and convenience.</p>
+            <h3>What if I forget my password?</h3><br>
+            <p>If you forget your password, regaining access is simple and secure. Just click the “Forgot Password” link on the login page, and you’ll be prompted to enter your registered email address. The system will then send you a password reset link. Clicking this link will allow you to create a new password and regain access to your account. This process ensures account recovery is user-friendly while maintaining high levels of security to protect your personal information.</p>
+            <h3>Is there a limit on votes?</h3><br>
+            <p>Yes, to ensure the integrity of each poll, every registered voter is allowed to cast only one vote per poll. The system automatically tracks voter activity to prevent duplicate voting, ballot stuffing, or any form of vote manipulation. Once a vote is submitted, it’s securely recorded and locked in, ensuring that each poll remains fair and that results accurately reflect the will of the participants.</p>
+            <h3>What support do you offer?</h3><br>
+            <p>We provide comprehensive support to all users of the online voting system. If you encounter any issues—whether it’s trouble logging in, problems with casting a vote, or questions about creating a poll—our support team is available via email and live chat. We strive to respond promptly and effectively to all inquiries. Additionally, we offer a help center with FAQs, tutorials, and guides to assist users in navigating the platform confidently and independently.</p>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <div class="footer-logo">VoteSphere</div>
+                    <p class="footer-text">
+                        Secure and transparent online voting made easy.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/strawpollcom/"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="https://x.com/StrawPollcom"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="https://www.facebook.com/strawpollcom/"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://discord.com/invite/x7pfswu"><ion-icon name="logo-discord"></ion-icon></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="index.html">How It Works</a>
+                    <a href="index.html">Features</a>
+                    <a href="index.html">FAQs</a>
+                </div>
+      
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="help.html">Help Center</a>
+                    <a href="privacypolicy.html">Privacy Policy</a>
+                    <a href="Terms.html">Terms & Conditions</a>
+                </div>
+      
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <a href="contact.html">Support</a>
+                    <a href="contact.html">Email Us</a>
+                    <a href="contact.html">Careers</a>
+                </div>
+            </div>
+    
+            <div class="footer-bottom">
+                &copy; 2025 VoteSphere. All rights reserved.
+            </div>
+        </footer>
+        </div>
+        
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        
+    </body>
+    </html>

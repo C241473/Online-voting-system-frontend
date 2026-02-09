@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Voting System Theme Manager</title>
+  <style>
+    :root {
+      --page-bg: #ffffff;
+      --poll-bg: #f9f9f9;
+      --poll-border: #cccccc;
+      --text-color: #222222;
+      --button-bg: #007bff;
+      --button-text: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: var(--page-bg);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    header, footer {
+      padding: 20px;
+      text-align: center;
+      background-color: var(--poll-bg);
+      border-bottom: 1px solid var(--poll-border);
+      color: var(--text-color);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .theme-editor {
+      width: 300px;
+      background: #1e1e2f;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .theme-editor h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .theme-editor label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    .theme-editor input[type="color"] {
+      width: 100%;
+      height: 40px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .theme-editor button {
+      margin-top: 20px;
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .theme-editor button a{
+      text-decoration: none;
+      color: #fff;
+    }
+    .preview {
+      background: var(--poll-bg);
+      border: 2px solid var(--poll-border);
+      border-radius: 12px;
+      padding: 25px 30px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .preview label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .preview button {
+      background: var(--button-bg);
+      color: var(--button-text);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid var(--poll-border);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Online Voting System</h1>
+  </header>
+
+  <div class="container">
+    <!-- Theme Panel -->
+    <div class="theme-editor">
+      <h2>Edit Theme</h2>
+      
+      <label>Page Background</label>
+      <input type="color" id="pageBg">
+
+      <label>Poll Box Background</label>
+      <input type="color" id="pollBg">
+
+      <label>Poll Box Border</label>
+      <input type="color" id="pollBorder">
+
+      <label>Text Color</label>
+      <input type="color" id="textColor">
+
+      <label>Button Background</label>
+      <input type="color" id="buttonBg">
+
+      <label>Button Text Color</label>
+      <input type="color" id="buttonText">
+
+      <button onclick="saveTheme()">Save Theme</button>
+      <button><p><a href="user.html">Cancel</a></p></button>
+    </div>
+
+    <!-- Preview -->
+    <div class="preview">
+      <h3>Vote for your favorite</h3>
+      <label><input type="radio" name="vote"> Option 1</label>
+      <label><input type="radio" name="vote"> Option 2</label>
+      <button>Vote</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 VoteSphere. All rights reserved.
+  </footer>
+
+  <script>
+    // Load theme from localStorage if available
+    function loadTheme() {
+      const savedTheme = JSON.parse(localStorage.getItem("voting-theme"));
+      if (savedTheme) {
+        for (const key in savedTheme) {
+          document.documentElement.style.setProperty(`--${key}`, savedTheme[key]);
+          const input = document.getElementById(key);
+          if (input) input.value = savedTheme[key];
+        }
+      }
+    }
+
+    // Save theme to localStorage
+    function saveTheme() {
+      const theme = {
+        "page-bg": document.getElementById("pageBg").value,
+        "poll-bg": document.getElementById("pollBg").value,
+        "poll-border": document.getElementById("pollBorder").value,
+        "text-color": document.getElementById("textColor").value,
+        "button-bg": document.getElementById("buttonBg").value,
+        "button-text": document.getElementById("buttonText").value,
+      };
+
+      for (const key in theme) {
+        document.documentElement.style.setProperty(`--${key}`, theme[key]);
+      }
+
+      localStorage.setItem("voting-theme", JSON.stringify(theme));
+      alert("Theme saved successfully!");
+    }
+
+    loadTheme();
+  </script>
+
+</body>
+</html>
+

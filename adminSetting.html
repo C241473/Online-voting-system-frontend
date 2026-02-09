@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #bcbcbc;
+    margin: 0;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.settings-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.settings-container h2 {
+    text-align: center;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.profile-section img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #5ac29d;
+}
+
+.profile-section input {
+    display: block;
+    margin: 10px auto;
+}
+
+.settings-group {
+    margin-bottom: 15px;
+}
+
+.settings-group label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.settings-group input, 
+.settings-group select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.buttons button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background: #5ac29d;
+    color: white;
+}
+
+.cancel-btn {
+    background: #ff4d4d;
+    color: white;
+}
+
+.buttons button:hover {
+    opacity: 0.8;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="settings-container">
+        <h2>User Profile Settings</h2>
+        
+        <div id="profileSettingsModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <!-- Profile Picture -->
+                <div class="profile-pic">
+                    <img id="profileImg" src="default-profile.jpg" alt="Profile Picture">
+                    <input type="file" id="profilePicUpload" accept="image/*">
+                </div>
+
+        <!-- Admin Details -->
+        <div class="settings-group">
+            <label for="UserName">Name:</label>
+            <input type="text" id="adminName" placeholder="Enter Name">
+
+            <label for="UserEmail">Email:</label>
+            <input type="email" id="adminEmail" placeholder="Enter Email">
+
+            <label for="UserPhone">Contact Number:</label>
+            <input type="tel" id="adminPhone" placeholder="Enter Contact">
+        </div>
+
+        <!-- Notification Preferences -->
+        <div class="settings-group">
+            <label for="notifications">Email Alerts:</label>
+            <select id="notifications">
+                <option value="all">All Notifications</option>
+                <option value="important">Only Important</option>
+                <option value="none">No Notifications</option>
+            </select>
+        </div>
+
+        <!-- Security Settings -->
+        <div class="settings-group">
+            <label for="UserPassword">Change Password:</label>
+            <input type="password" id="UserPassword" placeholder="New Password">
+
+            <label for="twoFactor">Two-Factor Authentication:</label>
+            <select id="twoFactor">
+                <option value="enabled">Enabled</option>
+                <option value="disabled">Disabled</option>
+            </select>
+        </div>
+
+        <!-- User Management -->
+        <div class="settings-group">
+            <label for="UserRoles">Manage User Roles:</label>
+            <select id="UserRoles">
+                <option value="User">User</option>
+                <option value="Editor">Editor</option>
+                <option value="Viewer">Viewer</option>
+            </select>
+        </div>
+
+        <!-- System Preferences -->
+        <div class="settings-group">
+            <label for="backupSettings">Backup Settings:</label>
+            <select id="backupSettings">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </div>
+
+        <!-- Customization -->
+        <div class="settings-group">
+            <label for="themeSettings">Theme Settings:</label>
+            <select id="themeSettings">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button class="save-btn" id="saveSettings">Save Changes</button>
+            <button class="cancel-btn" id="cancelSettings">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const saveBtn = document.getElementById("saveSettings");
+    const cancelBtn = document.getElementById("cancelSettings");
+    const profileImg = document.getElementById("profileImg");
+    const profilePicUpload = document.getElementById("profilePicUpload");
+
+    // Save Settings
+    saveBtn.addEventListener("click", function () {
+        alert("Settings Updated Successfully!");
+        window.location.href = "user.html";
+    });
+
+    // Cancel Button
+    cancelBtn.addEventListener("click", function () {
+        window.location.href = "user.html"; // Redirect to dashboard or previous page
+    });
+
+    // Profile Picture Upload
+    profilePicUpload.addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                profileImg.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+});
+    </script>
+</body>
+</html>

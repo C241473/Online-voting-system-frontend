@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f3;
+        }
+        .box {
+            padding: 5%;
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        h2 {
+            margin-top: 5%;
+            color: #003366;
+        }
+        h3{
+            margin-top: 7%;
+            margin-bottom: 2%;
+        }
+        p{
+            font-size: 18px;
+        }
+        a {
+           color: #0056b3;
+           text-decoration: underline;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        .header {
+            padding: 20px;
+            text-align: center;
+        }
+        .contents {
+            padding: 20px;
+        }
+        .contact-form,
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .form-control {
+            margin: 10px 0;
+            padding: 10px;
+            width: 50%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-control textarea {
+            height: 100px;
+        }
+        button {
+            background: #5ac29d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #5abbc2;
+        }
+        .info-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f7f7f7;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .map {
+            text-align: center;
+        }
+        .map iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        section {
+            margin-top: 40px;
+        }
+
+        section h2 {
+            color: #003366;
+            margin-top: 20px;
+        }
+        section p {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+
+    .job-card {
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .job-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .job-title {
+      font-size: 1.2rem;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+
+    .job-location {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .job-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .apply-btn {
+      display: inline-block;
+      background-color: #5ac29d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .apply-btn:hover {
+      background-color: #44987c;
+    }
+
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .job-card {
+        padding: 20px;
+      }
+.job-title {
+        font-size: 1.1rem;
+      }
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="navbar">
+                 <div class="icon">
+                     <h1 class="logo">VoteSphere</h1>
+                 </div>
+     
+                 <div class="menu">
+                     <ul>
+                         <li><a href="index.html">HOME</a></li>
+                         <li><a href="demo.html">DEMO</a></li>
+                         <li><a href="about.html">ABOUT</a></li>
+                         <li><a href="reference.html">REFERENCE</a></li>
+                         <li><a href="contact.html">CONTACT</a></li>
+                     </ul>
+                 </div>
+    
+                <div class="auth-buttons">
+                    <button class="btn login-btn" onclick="showLogin()"><a href="index.html">Login</a></button>
+                    <button class="btn signup-btn"><a href="sign up.html">Sign Up</a></button>
+                </div>
+                <!-- Login Form Popup -->
+                <div class="overlay" id="overlay" onclick="hideLogin()"></div>
+    
+                <div class="form" id="loginForm">
+                    <h2>Login Here</h2>
+                    <form action="login.html" method="POST">
+                        <input type="email" name="email" placeholder="Enter Email Here" required>
+                        <input type="password" name="password" placeholder="Enter Password Here" required>
+                        <button class="btnn" type="submit">Login</button>
+                        <button class="btnn" type="button" onclick="hideLogin()">Cancel</button>
+    
+                    <p class="link"> Don't have an account?  
+                       <br><a href="sign up.html">Sign up</a> here</p>
+                    <p class="liw">Log in with</p>
+    
+                    <div class="icons">
+                            <a href="https://www.instagram.com/strawpollcom/"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="https://x.com/StrawPollcom"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a href="https://www.facebook.com/strawpollcom/"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a href="https://discord.com/invite/x7pfswu"><ion-icon name="logo-discord"></ion-icon></a>
+                        </div>
+                </form>
+                </div>
+            </div> 
+        </header>
+        
+    <div class="box">
+        <div class="header">
+            <h1>Contact Us</h1>
+        </div>
+
+        <div class="contents" id="support">
+            <h2>Support</h2>
+            <p>Need help? Our dedicated support team is available 24/7 to assist you with your questions and concerns.</p>
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Reach Out to Us</h3>
+                <form action="/submit_contact" method="POST">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                    <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info" id="email">
+                <h2>Email Us</h2>
+                <p>For general inquiries or feedback, email us.</p>
+                <h3>Contact Information</h3>
+                <div class="info-card">
+                    <p>Email:<a href="mailto:contact@VoteSphere.com"> contact@VoteSphere.com </a></p>
+                    <p>Phone: +1 800 123 4567</p>
+                    <p><a href="https://twitter.com/votingsystem" target="_blank">Twitter</a> | <a href="https://facebook.com/votingsystem" target="_blank">Facebook</a></p>
+                </div>
+            </div>
+<!-- Map Section -->
+            <div class="map">
+                <h3>Find Us</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5142534216287!2d-122.47844734880147!3d37.819906319768455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e059cde2465%3A0x2bce1d8efcb0b7e0!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1616787425053!5m2!1sen!2sus" 
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="extras">
+                <!-- Feedback System -->
+                <div class="feedback">
+                    <h3>We Value Your Feedback</h3>
+                    <form action="/submit_feedback" method="POST">
+                        <label for="rating">Rate Us:</label>
+                        <select id="rating" name="rating" class="form-control" required>
+                            <option value="5">🌟🌟🌟🌟🌟 Excellent</option>
+                            <option value="4">🌟🌟🌟🌟 Good</option>
+                            <option value="3">🌟🌟🌟 Average</option>
+                            <option value="2">🌟🌟 Poor</option>
+                            <option value="1">🌟 Very Poor</option>
+                        </select>
+                    </form>
+                </div>            
+            </div>
+
+            <section id="careers">
+                <h2>Careers</h2>
+                <p>At Online Voting System, we're building a secure and inclusive digital democracy. We believe in innovation, transparency, and empowering every team member to make an impact.</p>
+              
+                <div class="job-card">
+    <div class="job-title">Frontend Developer</div>
+    <div class="job-location">Remote | Full-Time</div>
+    <div class="job-desc">
+      We’re looking for a skilled frontend developer with experience in HTML, CSS, JavaScript, and modern frameworks like React or Vue.
+    </div>
+    <a href="#" class="apply-btn">Apply Now</a>
+  </div>
+
+  <div class="job-card">
+    <div class="job-title">Backend Developer (Django)</div>
+    <div class="job-location">Bangalore, India | Full-Time</div>
+    <div class="job-desc">
+      Seeking a Django backend developer with experience in building RESTful APIs, authentication systems, and PostgreSQL integration.
+    </div>
+    <a href="#" class="apply-btn">Apply Now</a>
+  </div>
+
+  <div class="job-card">
+    <div class="job-title">UI/UX Designer</div>
+    <div class="job-location">Remote | Contract</div>
+    <div class="job-desc">
+      Help us create intuitive interfaces for our voting platform. Proficiency in Figma, Adobe XD, or Sketch is preferred.
+    </div>
+    <a href="#" class="apply-btn">Apply Now</a>
+  </div>
+
+  <div class="job-card">
+    <div class="job-title">System Administrator</div>
+    <div class="job-location">New Delhi, India | Full-Time</div>
+    <div class="job-desc">
+      We need a system admin to manage our servers, backups, and deployment pipelines. Experience with Linux, Nginx, and Docker required.
+    </div>
+    <a href="#" class="apply-btn">Apply Now</a>
+  </div>
+</section>
+              
+        </div>
+    </div>
+<footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">VoteSphere</div>
+                <p class="footer-text">
+                    Secure and transparent online voting made easy.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/strawpollcom/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://x.com/StrawPollcom"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.facebook.com/strawpollcom/"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://discord.com/invite/x7pfswu"><ion-icon name="logo-discord"></ion-icon></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="index.html">How It Works</a>
+                <a href="index.html">Features</a>
+                <a href="index.html">FAQs</a>
+            </div>
+  
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="help.html">Help Center</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="term.html">Terms & Conditions</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="#support">Support</a>
+                <a href="#email">Email Us</a>
+                <a href="#careers">Careers</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 VoteSphere. All rights reserved.
+        </div>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>
